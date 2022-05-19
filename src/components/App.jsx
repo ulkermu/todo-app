@@ -1,9 +1,13 @@
-import Todo from "./Todo";
+import "../style/App.css";
+import TodoList from "./TodoList";
+import { TodoContextProvider } from "../context/TodoContext";
 
 function App() {
   return (
     <div className="App">
-      <Todo />
+      <TodoContextProvider>
+        <TodoList />
+      </TodoContextProvider>
     </div>
   );
 }
