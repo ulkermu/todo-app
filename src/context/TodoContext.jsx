@@ -1,15 +1,11 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const TodoContext = createContext();
 
 export const TodoContextProvider = (props) => {
-  /*const [content, setContent] = useState([
-    { id: 1, text: "Code exercise." },
-    { id: 2, text: "Code review." },
-    { id: 3, text: "Code reduct." },
-    { id: 4, text: "Code edit." },
-  ]);*/
+  
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   const reducer = (content, action) => {
     switch (action.type) {
@@ -50,7 +46,7 @@ export const TodoContextProvider = (props) => {
   });
 
   return (
-    <TodoContext.Provider value={{ content, dispatch }}>
+    <TodoContext.Provider value={{ content, dispatch, isFadingOut, setIsFadingOut }}>
       {props.children}
     </TodoContext.Provider>
   )

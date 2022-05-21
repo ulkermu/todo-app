@@ -5,8 +5,8 @@ const TodoList = () => {
   return (
     <div className="TodoList">
       <h1>Todo List</h1>
-      <Todo />
       <TodoAdd />
+      <Todo />
     </div>
   );
 };

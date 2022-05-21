@@ -29,7 +29,6 @@ const TodoAdd = () => {
     input.value = "";
   }
 
-
   return (
     <form className="TodoAdd" onSubmit={submitHandler}>
       <input

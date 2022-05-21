@@ -14,7 +14,7 @@ body {
       margin: 20px;
       padding: 20px;
       border: 1px solid #724c4c;
-      border-radius: 20px;
+      border-radius: 10px;
       h1 {
         margin: 0 auto;
       }
@@ -23,10 +23,13 @@ body {
         .TodoChildren {
           display: flex;
           padding: 20px;
-          background-color: #724c4c;
-          color: #f2f2f2;
-          border-radius: 20px;
+          background-color: #f2f2f2;
+          font-size: 18px;
+          font-weight: 500;
+          border-radius: 10px;
           margin: 10px 0;
+          -webkit-animation: fadein 150ms linear forwards;
+          animation: fadein 150ms linear forwards;
           .TodoDelete {
             border-radius: 50%;
             border: none;
@@ -35,25 +38,72 @@ body {
             cursor: pointer;
           }
         }
+        .TodoChildren-fadeout {
+          display: flex;
+          padding: 20px;
+          background-color: #f2f2f2;
+          font-size: 18px;
+          font-weight: 500;
+          border-radius: 10px;
+          margin: 10px 0;
+          -webkit-animation: fadeout 150ms linear forwards;
+          animation: fadeout 150ms linear forwards;
+        }
       }
       .TodoAdd {
         display: flex;
-        flex-direction: column;
         width: 100%;
         gap: 10px;
         margin-top: 20px;
         input {
           padding: 10px 20px;
-          border-radius: 15px;
+          border-radius: 10px;
+          width: inherit;
         }
         button {
           padding: 10px 0;
-          border-radius: 15px;
+          border-radius: 10px;
           width: 100px;
           margin-left: auto;
           cursor: pointer;
         }
       }
     }
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

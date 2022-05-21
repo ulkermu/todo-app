@@ -29,7 +29,7 @@ body .App .TodoList {
   margin: 20px;
   padding: 20px;
   border: 1px solid #724c4c;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 body .App .TodoList h1 {
@@ -45,10 +45,13 @@ body .App .TodoList .Todo .TodoChildren {
   display: -ms-flexbox;
   display: flex;
   padding: 20px;
-  background-color: #724c4c;
-  color: #f2f2f2;
-  border-radius: 20px;
+  background-color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
   margin: 10px 0;
+  -webkit-animation: fadein 150ms linear forwards;
+  animation: fadein 150ms linear forwards;
 }
 
 body .App .TodoList .Todo .TodoChildren .TodoDelete {
@@ -59,14 +62,24 @@ body .App .TodoList .Todo .TodoChildren .TodoDelete {
   cursor: pointer;
 }
 
+body .App .TodoList .Todo .TodoChildren-fadeout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  background-color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  margin: 10px 0;
+  -webkit-animation: fadeout 150ms linear forwards;
+  animation: fadeout 150ms linear forwards;
+}
+
 body .App .TodoList .TodoAdd {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 100%;
   gap: 10px;
   margin-top: 20px;
@@ -74,14 +87,51 @@ body .App .TodoList .TodoAdd {
 
 body .App .TodoList .TodoAdd input {
   padding: 10px 20px;
-  border-radius: 15px;
+  border-radius: 10px;
+  width: inherit;
 }
 
 body .App .TodoList .TodoAdd button {
   padding: 10px 0;
-  border-radius: 15px;
+  border-radius: 10px;
   width: 100px;
   margin-left: auto;
   cursor: pointer;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */
