@@ -41,11 +41,22 @@ body .App .TodoList .Todo {
 }
 
 body .App .TodoList .Todo .TodoChildren {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 20px;
   background-color: #724c4c;
   color: #f2f2f2;
   border-radius: 20px;
   margin: 10px 0;
+}
+
+body .App .TodoList .Todo .TodoChildren .TodoDelete {
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  cursor: pointer;
 }
 
 body .App .TodoList .TodoAdd {

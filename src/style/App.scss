@@ -21,11 +21,19 @@ body {
       .Todo {
         width: 100%;
         .TodoChildren {
+          display: flex;
           padding: 20px;
           background-color: #724c4c;
           color: #f2f2f2;
           border-radius: 20px;
           margin: 10px 0;
+          .TodoDelete {
+            border-radius: 50%;
+            border: none;
+            background-color: transparent;
+            margin-left: auto;
+            cursor: pointer;
+          }
         }
       }
       .TodoAdd {
