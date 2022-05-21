@@ -2,28 +2,37 @@ import { useContext, useState } from "react";
 import TodoContext from "../context/TodoContext";
 
 const TodoAdd = () => {
-  const { content, setContent } = useContext(TodoContext);
+  const { dispatch } = useContext(TodoContext);
 
-  const [form, setForm] = useState([]);
+  const [newContent, setNewContent] = useState({
+    todoContent: "",
+  });
+
+  const { todoContent } = newContent;
 
   const inputHandler = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setNewContent({ ...newContent, todoContent: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    if (content.text === "") {
-      return false;
-    }
-
-    setContent([...content, form])
-    //setForm(initialValue);
+    dispatch({
+      type: "add_content",
+      content: {
+        todoContent,
+      },
+    });
   };
 
   return (
     <form className="TodoAdd" onSubmit={submitHandler}>
-      <input type="text" name="todoadd" placeholder="Add Todo" autoComplete="off" onChange={inputHandler} />
+      <input
+        type="text"
+        name="todoadd"
+        placeholder="Add Todo"
+        autoComplete="off"
+        onChange={inputHandler}
+      />
       <button>Add</button>
       <button>Remove</button>
     </form>
