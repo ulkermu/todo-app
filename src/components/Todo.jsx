@@ -6,7 +6,7 @@ const Todo = () => {
   return (
     <div className="Todo">
       {content.map((content, id) => (
-        <div className="TodoChildren" key={id}>{content.text}</div>
+        <div className="TodoChildren" key={id}>{content.todoContent}</div>
       ))}
     </div>
   );
