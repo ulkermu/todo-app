@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import TodoContext from "../context/TodoContext";
 
 const TodoAdd = () => {
@@ -24,17 +24,23 @@ const TodoAdd = () => {
     });
   };
 
+  const buttonHandler = () => {
+    const input = document.getElementById('addTodo');
+    input.value = "";
+  }
+
+
   return (
     <form className="TodoAdd" onSubmit={submitHandler}>
       <input
+        id="addTodo"
         type="text"
         name="todoadd"
         placeholder="Add Todo"
         autoComplete="off"
         onChange={inputHandler}
       />
-      <button>Add</button>
-      <button>Remove</button>
+      <button onClick={buttonHandler}>Add</button>
     </form>
   );
 };
