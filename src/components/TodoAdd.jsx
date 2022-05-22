@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import TodoContext from "../context/TodoContext";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-//import Button from '@mui/material/Button';
 
 const TodoAdd = () => {
   const { dispatch } = useContext(TodoContext);
@@ -46,7 +45,7 @@ const TodoAdd = () => {
       <TextField
         fullWidth
         id="standard-basic"
-        label="ToDo"
+        label="Todo"
         variant="standard"
         type="text"
         name="todoadd"

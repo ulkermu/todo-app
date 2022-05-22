@@ -1,5 +1,5 @@
 body {
-  color: #c452d9;
+  color: #1976d2;
   margin: 0;
   padding: 0;
   background: radial-gradient(
@@ -18,7 +18,7 @@ body {
       width: 100%;
       margin: 20px;
       padding: 20px;
-      border: 1px solid #c452d9;
+      border: 1px solid #1976d2;
       border-radius: 10px;
       h1 {
         margin: 0 auto;
@@ -38,7 +38,7 @@ body {
           .TodoDelete {
             border-radius: 50%;
             border: 1px solid transparent;
-            background-color: #c452d9;
+            background-color: #1976d2;
             color: #f2f2f2;
             margin-left: auto;
             cursor: pointer;
@@ -50,8 +50,8 @@ body {
             &:hover {
               transition: all 150ms linear;
               background-color: #f2f2f2;
-              color: #c452d9;
-              border: 1px solid #c452d9;
+              color: #1976d2;
+              border: 1px solid #1976d2;
             }
           }
         }
@@ -73,7 +73,7 @@ body {
         gap: 10px;
         margin-top: 20px;
         .TodoAddInput {
-          padding: 10px 20px;
+          padding: 10px 0;
           border-radius: 10px;
           width: inherit;
         }
@@ -83,14 +83,14 @@ body {
           width: 100px;
           margin-left: auto;
           cursor: pointer;
-          border: 1px solid #c452d9;
+          border: 1px solid #1976d2;
           background-color: transparent;
-          color: #c452d9;
+          color: #1976d2;
           height: 50px;
           &:hover {
             transition: all 150ms linear;
             border: 1px solid transparent;
-            background-color: #c452d9;
+            background-color: #1976d2;
             color: #f2f2f2;
           }
         }
