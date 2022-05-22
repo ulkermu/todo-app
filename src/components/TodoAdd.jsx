@@ -17,12 +17,12 @@ const TodoAdd = () => {
   const inputHandler = (e) => {
     setNewContent({ ...newContent, todoContent: e.target.value });
   };
-  
-  const input = document.getElementById("standard-basic");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    input.value = newContent;
+    if(!newContent.todoContent || /^\s*$/.test(newContent.todoContent)) {
+      return;
+    }
     dispatch({
       type: "add_content",
       content: {
