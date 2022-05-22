@@ -1,7 +1,12 @@
 body {
-  color: #724c4c;
+  color: #c452d9;
   margin: 0;
   padding: 0;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
   .App {
     display: flex;
     justify-content: center;
@@ -55,7 +60,7 @@ body {
         width: 100%;
         gap: 10px;
         margin-top: 20px;
-        input {
+        .TodoAddInput {
           padding: 10px 20px;
           border-radius: 10px;
           width: inherit;
@@ -66,6 +71,16 @@ body {
           width: 100px;
           margin-left: auto;
           cursor: pointer;
+          border: 1px solid #c452d9;
+          background-color: transparent;
+          color: #c452d9;
+          height: 50px;
+          &:hover {
+            transition: all 150ms linear;
+            border: 1px solid transparent;
+            background-color: #c452d9;
+            color: #f2f2f2;
+          }
         }
       }
     }

@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import TodoContext from "../context/TodoContext";
-//import Button from "@material-ui/core/Button";
 
 const Todo = () => {
   const { content, dispatch } = useContext(TodoContext);

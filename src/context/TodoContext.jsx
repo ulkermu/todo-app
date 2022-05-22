@@ -4,8 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 const TodoContext = createContext();
 
 export const TodoContextProvider = (props) => {
-  
-  const [isFadingOut, setIsFadingOut] = useState(false);
 
   const reducer = (content, action) => {
     switch (action.type) {
@@ -46,7 +44,7 @@ export const TodoContextProvider = (props) => {
   });
 
   return (
-    <TodoContext.Provider value={{ content, dispatch, isFadingOut, setIsFadingOut }}>
+    <TodoContext.Provider value={{ content, dispatch }}>
       {props.children}
     </TodoContext.Provider>
   )
